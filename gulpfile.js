@@ -1,8 +1,11 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 
+//browserSync
+var browserSync  = require('browser-sync');
+var reload = browserSync.reload;
+
 var sassPaths = [
-  'bower_components/normalize.scss/sass',
   'bower_components/foundation-sites/scss',
   'bower_components/motion-ui/src'
 ];
@@ -20,6 +23,24 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['sass'], function() {
+//browserSync
+gulp.task('browser-sync', function(){
+  var archivos = [
+  './style.css',
+  './*.php',
+  './template-parts/*.php',
+  './inc/*.php',
+  './js/*.js',
+  './css/app.css'
+  ];
+
+  //Inicializar BrowserSync
+  browserSync.init(archivos, {
+    proxy:'http://localhost:8888/unireformada/',
+    notify: false
+  })
+});
+
+gulp.task('default', ['sass', 'browser-sync'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
 });
