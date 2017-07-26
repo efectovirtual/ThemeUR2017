@@ -70,5 +70,11 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
         'primary' => esc_html__( 'Menu Top', 'ureformada' ),
     ) );
 
+// Menu Derecho Home
+register_nav_menus( array(
+    'primary' => esc_html__( 'Menu Derecho Home', 'ureformada' ),
+) );
+
+
 
  ?> 
