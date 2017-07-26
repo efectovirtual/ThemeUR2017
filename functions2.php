@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Ureformada functions and definitions
@@ -6,6 +7,7 @@
  *
  * @package Ureformada
  */
+
 
 if ( ! function_exists( 'ureformada_setup' ) ) :
 /**
@@ -119,9 +121,9 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 function ureformada_scripts() {
 
 
-
 	/* css ======== */
 
+	wp_enqueue_style( 'ureformada-style', get_stylesheet_uri() );
 
 	wp_enqueue_style('site-css', get_template_directory_uri().'/css/app.css');
 
@@ -132,9 +134,6 @@ function ureformada_scripts() {
 	wp_enqueue_style('owlcarousel', get_template_directory_uri().'/owl-carousel/owl.carousel.css');
 
 	wp_enqueue_style('foundation-css', 'https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css' );
-
-	wp_enqueue_style( 'ureformada-style', get_stylesheet_uri() );
-
 	
 
 
@@ -163,11 +162,7 @@ function ureformada_scripts() {
 
 
   wp_enqueue_script('gmap','https://maps.googleapis.com/maps/api/js?key=AIzaSyAotgXiiIPK1kGYcLrm0FBiB-dyW6EuAvc', array(), '1.3.1');
-
-
-
-
-  
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -201,3 +196,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+require get_template_directory() . '/inc/ev.php';

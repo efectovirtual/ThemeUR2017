@@ -1,3 +1,4 @@
+$colorFondo: #f4f4f4;
 $colorBlueTop: #056cd5;
 $colorAmarillo: #f8e937;
 $colorBlueLink: #003d7c;
@@ -13,6 +14,7 @@ $fuentePrincipal: 'Lato', sans-serif;
 
 body{
   font-family: $fuentePrincipal !important;
+  background: $colorFondo !important;
 }
 
 .fullWidth {
