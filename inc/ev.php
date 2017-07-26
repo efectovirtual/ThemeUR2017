@@ -59,5 +59,16 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
         'primary' => esc_html__( 'Menu Principal', 'ureformada' ),
     ) );
 
+// Menu Footer
+    register_nav_menus( array(
+        'primary' => esc_html__( 'Menu Footer', 'ureformada' ),
+    ) );
+
+
+// Menu Top
+    register_nav_menus( array(
+        'primary' => esc_html__( 'Menu Top', 'ureformada' ),
+    ) );
+
 
  ?> 
