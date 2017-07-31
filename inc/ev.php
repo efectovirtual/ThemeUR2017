@@ -61,20 +61,19 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 // Menu Footer
     register_nav_menus( array(
-        'primary' => esc_html__( 'Menu Footer', 'ureformada' ),
+        'footer' => esc_html__( 'Menu Footer', 'ureformada' ),
     ) );
 
 
 // Menu Top
     register_nav_menus( array(
-        'primary' => esc_html__( 'Menu Top', 'ureformada' ),
+        'menutop' => esc_html__( 'Menu Top', 'ureformada' ),
     ) );
 
 // Menu Derecho Home
 register_nav_menus( array(
-    'primary' => esc_html__( 'Menu Derecho Home', 'ureformada' ),
+    'menurighthome' => esc_html__( 'Menu Derecho Home', 'ureformada' ),
 ) );
 
 
 
- ?> 

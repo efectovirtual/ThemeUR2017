@@ -15,44 +15,99 @@
 get_header(); ?>
 
 
-<div class="row">
+  <header id="masthead" class="site-header" role="banner">
+    
+
+      <!-- Header -->
+    <div class="rheader">
+
+    <div class="row expanded">
+      <div class="column medium-4 bartopxpand"></div>
+      <div class="column medium-8 bartopxpand">
+        <div class="skew-bar"></div>
+        <div class="bartop">
+          <ul>
+            <li><p>Llámanos: <strong>361-04-32</strong></p></li>
+            <li><p>Pagos</p></li>
+            <li><p>Portal de empleo</p></li>
+            <li><p>Email</p></li>
+            <li><div class="buscadortop">Ingresa tu búsqueda...</div></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+      <div class="row align-justify header">
+          <div class="column medium-3 menulogo">
+          <img class="imgvertical" src="<?php echo get_template_directory_uri(); ?>/img/logo-ur.png" alt="Corporación Universitaria Reformada">
+          </div>
+
+          <div class="column medium-9 menumen">
+
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+
+        
+               <?php echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
+              
+
+            </nav><!-- #site-navigation -->
+
+          </div>
+        
+      </div>
+    </div>
+      <!-- Fin Header -->
+
+  </header>
+
+
+
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-    <?php
-    if ( have_posts() ) :
+    <?php get_template_part('template-parts/slider'); ?>
 
-      if ( is_home() && ! is_front_page() ) : ?>
-        <header>
-          <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-        </header>
+    <div class="row">
 
-      <?php
-      endif;
+        <?php
+        if ( have_posts() ) :
 
-      /* Start the Loop */
-      while ( have_posts() ) : the_post();
+          if ( is_home() && ! is_front_page() ) : ?>
+            <header>
+              <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+            </header>
 
-        /*
-         * Include the Post-Format-specific template for the content.
-         * If you want to override this in a child theme, then include a file
-         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-         */
-        get_template_part( 'template-parts/content', get_post_format() );
+          <?php
+          endif;
 
-      endwhile;
+          /* Start the Loop */
+          while ( have_posts() ) : the_post();
 
-      the_posts_navigation();
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'template-parts/content', get_post_format() );
 
-    else :
+          endwhile;
 
-      get_template_part( 'template-parts/content', 'none' );
+          the_posts_navigation();
 
-    endif; ?>
+        else :
+
+          get_template_part( 'template-parts/content', 'none' );
+
+        endif; ?>
+
+
+    </div><!-- #container -->
+
 
     </main><!-- #main -->
   </div><!-- #primary -->
-</div><!-- #container -->
+
 <?php
 get_sidebar();
 get_footer();

@@ -7,6 +7,8 @@
  * @package Ureformada
  */
 
+
+
 if ( ! function_exists( 'ureformada_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -162,10 +164,6 @@ function ureformada_scripts() {
 
 
   wp_enqueue_script('gmap','https://maps.googleapis.com/maps/api/js?key=AIzaSyAotgXiiIPK1kGYcLrm0FBiB-dyW6EuAvc', array(), '1.3.1');
-
-
-
-
   
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -200,3 +198,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+require get_template_directory() . '/inc/ev.php';
+
+
+
+

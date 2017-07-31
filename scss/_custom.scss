@@ -1,5 +1,7 @@
+
 $colorFondo: #f4f4f4;
-$colorBlueTop: #056cd5;
+$colorBlueTop: #0059a5;
+$colorBlueSearch: #003e73;
 $colorAmarillo: #f8e937;
 $colorBlueLink: #003d7c;
 $colorBlueHover: #056cd5;
@@ -11,6 +13,33 @@ $fuentePrincipal: 'Lato', sans-serif;
   margin: 0 6px 0 0;
   line-height: 20px;
 }
+
+@mixin centerVertical(){
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin menuStilo($r,$g, $b, $t){
+
+  .main-navigation ul {
+
+  ul{
+      background: rgba($r,$g,$b,$t);
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+
+      li{
+        padding: 2px;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+        top:0px;
+      }
+    }
+  }
+}
+
+
 
 body{
   font-family: $fuentePrincipal !important;
@@ -68,56 +97,10 @@ i.fa-whatsapp{
   @include iconos($tam: 22px);
 }
 
-.contacto-top{
-  background: $colorAmarillo;
-  color: #000000;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  margin-top: -7px;
-  padding-top: 7px;
-  font-size: rem-calc(15);
-  font-weight: 700;
-  text-transform: uppercase;
-
-  a{
-    color: #000000;
-  }
-}
-
-.logomenu-top{
-  height: 100px;
-
-  .imglogotop{
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-
-#primary-menu{
-  margin-top: 5px;
-  li{
-    // display: inline-block;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 0 3px;
-    text-transform: uppercase;
-
-    a{
-       color: $colorBlueLink;
-
-      &:hover{
-      color: $colorBlueHover; 
-    }
-    }
-    
-  }
-}
-
 // Banner incial
 
 .binicio, .binicio img{
-  max-height: 500px;
+  max-height: 720px;
   text-align: center;
 }
 
@@ -131,7 +114,7 @@ i.fa-whatsapp{
   
   .owl-nav {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
     right:0;  
       
@@ -354,5 +337,136 @@ h1.entry-title{
     }
   }
 }
+
+
+
+
+// Stile CA
+
+.rheader{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+    margin: auto;
+    left: 0; right: 0;
+  height: 220px;
+  border: 0;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.7+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+.header{
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+    margin: auto;
+    left: 0; right: 0;
+
+  .main-navigation{
+
+    > span{
+      padding: rem-calc(10);
+      display: block;
+      text-align: right;
+      margin-top: -15px;
+    }
+    .menu-icon{
+      @include hamburger(#fff, #fff, 30px, 20px, 4px, 3);
+      box-shadow: none !important;
+
+      &:after{
+        border-radius: 5px;
+      }
+
+    }
+
+    li{
+      float: none;
+    }
+  }
+
+  .menumen{
+
+
+    nav{
+
+      margin-top: 10px;
+  
+      a{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 20px;
+        letter-spacing: -1px;
+      }
+
+      
+    }
+  }
+
+  @include menuStilo(0,0,0,.7);
+
+
+}
+
+#mega-menu-wrap-primary{
+  
+  li{
+    a{
+      line-height: 20px !important;
+    }
+  }
+
+}
+
+
+.bartop{
+  height: 45px;
+  background: $colorBlueTop;
+  padding-top: 7px;
+
+  li{
+    display: inline-block;
+    color: #fff;
+  }
+}
+
+.skew-bar{
+  position: relative;
+  float: left;
+  left: -10px;
+  width: 40px;
+  height: 45px;
+  z-index: -1;
+  background: $colorBlueTop;
+  transform: skew(20deg);
+}
+
+
+
+.row .column.medium-8.bartopxpand{
+  padding-right: 0 !important;
+  width: 72%;
+}
+
+.row .column.medium-4.bartopxpand{
+  width: 28%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
