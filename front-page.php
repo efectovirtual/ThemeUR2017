@@ -182,6 +182,17 @@ get_header(); ?>
 </div>
 
 <!-- Eventos y Videos -->
+
+<?php $args=array(
+	'post_type' => 'eventos',
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
+	'posts_per_page' => 4
+);?>
+
+<?php $consulta = new WP_Query($args);?>
+
+
 <div class="eventosyvideos">
 
     <div class="row">
@@ -189,20 +200,22 @@ get_header(); ?>
       <div class="columns large-6 medium-12 bloque1">
           <h1>Eventos</h1>
 
+      <?php while($consulta->have_posts()): $consulta->the_post(); ?>
+
           <div class="lineagris"></div>
           <div class="eventoitem">
 
             <div class="fechaevento">
-              <div class="emes">ABR</div>
-              <div class="edia">17</div>
+              <div class="emes"><?php the_field('Mes'); ?></div>
+              <div class="edia"><?php the_field('dia'); ?></div>
             </div>
 
             <div class="tituloevento">
-              <p>Conferencia El desarrollo Humano en las Organizaciones productivas. Retos del especialista frente al malestar en el trabajo</p>
+              <p><?php the_field('texto'); ?></p>
             </div>
 
             <div class="iconodetalles">
-              <a href="<?php the_permalink();?>">
+              <a href="<?php the_field('vinculo'); ?>">
                 <div class="linknoticias"> + </div>
               </a>
             </div>
@@ -211,16 +224,38 @@ get_header(); ?>
 
           <div class="clear"></div>
 
+      <?php endwhile; wp_reset_postdata(); ?>
+
       </div>
 
       <div class="columns large-6 medium-12 bloque2">
           <h1>Videos</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptas culpa quam aperiam fugiat. Ex placeat, enim laboriosam obcaecati aspernatur maxime quo praesentium. Quod alias facilis quis totam cumque esse!</p>
+
+          <a data-open="VideoPop">
+            <?php $image = get_field('imagen', 74); ?>
+            <div class="imgcursoini" style="background: url(<?php echo get_template_directory_uri(); ?>/img/bg-videour.png), url(<?php echo $image[ 'url' ]; ?>); background-size: cover; background-position: center center;"></div>
+          </a>
+            <div class="panel clearfix">
+              <div class="boton-videos"><a href="https://www.youtube.com/channel/UCbfreHkeqjZgMQoCeL9boCA">Ver todos los videos</a></div>
+          </div>
 
       </div>
 
+
+
     </div>
 
+</div>
+
+
+<div class="medium reveal" id="VideoPop" data-reveal data-reset-on-close="true">
+    <div class="flex-video">
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/<?php the_field('video',74); ?>" allowfullscreen style="border:0"></iframe>
+  </div>
+
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 
 <!-- Iconos Secciones -->

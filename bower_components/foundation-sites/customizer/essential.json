@@ -1,7 +1,7 @@
 {
   "modules": [
     "typography",
-    "xy_grid",
+    "grid",
     "forms",
     "button",
     "callout",

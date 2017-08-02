@@ -492,7 +492,7 @@ h1.entry-title{
 
 .admisiones-home{
   background: $colorBlueTop;
-  padding: 50px 70px;
+  padding: 50px 70px !important;
 
   h1{
     text-align: center;
@@ -761,4 +761,28 @@ h1.entry-title{
 .lineagris{
   border-bottom: 1px solid #bebebe;
   margin-bottom: -1px;
+  margin-top: 10px;
+}
+
+.imgcursoini{
+  height: 303px;
+}
+
+.boton-videos{
+  text-align: center;
+  text-transform: uppercase;
+  background: $colorBlueHover;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  color: #fff;
+
+  a{
+    color: #fff;
+
+    &:hover{
+      color: #add6fa;
+    }
+  }
+
 }

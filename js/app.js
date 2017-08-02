@@ -1,8 +1,8 @@
 
 
-    $(document).ready(function(){
+    jQuery(document).ready(function(){
 
-        $("#owl-slider").owlCarousel({
+        jQuery("#owl-slider").owlCarousel({
           items:1,
           loop:true,
           margin:0,
@@ -12,7 +12,7 @@
 
         });
 
-        $("#slider-informativo").owlCarousel({
+        jQuery("#slider-informativo").owlCarousel({
           items:1,
           loop:true,
           margin:0,
@@ -22,7 +22,7 @@
         });
 
 
-        $("#noticias-inicio").owlCarousel({
+        jQuery("#noticias-inicio").owlCarousel({
           loop:true,
           margin:0,
           nav:true,
@@ -58,10 +58,10 @@
 
 
         function moved() {
-          var owl = $("#owl-example").data('owlCarousel');
-          var $buttons = $('.custom-control button');
+          var owl = jQuery("#owl-example").data('owlCarousel');
+          var $buttons = jQuery('.custom-control button');
           $buttons.removeClass('active').removeAttr('disabled');
-          $('.custom-control').find('[data-slide="'+owl.currentItem +'"]').addClass('active').attr('disabled', 'disabled');
+          jQuery('.custom-control').find('[data-slide="'+owl.currentItem +'"]').addClass('active').attr('disabled', 'disabled');
         }
 
 
@@ -69,4 +69,4 @@
     });
 
 
-$(document).foundation();
+jQuery(document).foundation();
