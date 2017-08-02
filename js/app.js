@@ -12,7 +12,17 @@
 
         });
 
-        $("#owl-servicios").owlCarousel({
+        $("#slider-informativo").owlCarousel({
+          items:1,
+          loop:true,
+          margin:0,
+          nav:true,
+          rtl:true,
+          afterMove: moved
+        });
+
+
+        $("#noticias-inicio").owlCarousel({
           loop:true,
           margin:0,
           nav:true,
@@ -52,8 +62,8 @@
           var $buttons = $('.custom-control button');
           $buttons.removeClass('active').removeAttr('disabled');
           $('.custom-control').find('[data-slide="'+owl.currentItem +'"]').addClass('active').attr('disabled', 'disabled');
-        }       
-        
+        }
+
 
 
     });

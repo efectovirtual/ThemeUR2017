@@ -16,10 +16,10 @@ get_header(); ?>
 
 
   <header id="masthead" class="site-header" role="banner">
-    
+
 
       <!-- Header -->
-    <div class="rheader">
+  <div class="rheader">
 
     <div class="row expanded">
       <div class="column medium-4 bartopxpand"></div>
@@ -28,86 +28,209 @@ get_header(); ?>
         <div class="bartop">
           <ul>
             <li><p>Llámanos: <strong>361-04-32</strong></p></li>
-            <li><p>Pagos</p></li>
-            <li><p>Portal de empleo</p></li>
-            <li><p>Email</p></li>
-            <li><div class="buscadortop">Ingresa tu búsqueda...</div></li>
+            <li><p><i class="fa fa-money" aria-hidden="true"></i>Pagos</p></li>
+            <li><p><i class="fa fa-briefcase" aria-hidden="true"></i>Portal de empleo</p></li>
+            <li><p><i class="fa fa-envelope" aria-hidden="true"></i>Email</p></li>
+            <li><div class="buscadortop">
+
+            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+
+                <input type="search" class="search-field"
+            placeholder="<?php echo esc_attr_x( 'Ingresa tu búsqueda... ', 'placeholder' ) ?>"
+            value="<?php echo get_search_query() ?>" name="s"
+            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+
+            </form>
+
+            </div></li>
           </ul>
 
         </div>
       </div>
     </div>
 
-      <div class="row align-justify header">
-          <div class="column medium-3 menulogo">
+    <div class="row align-justify header">
+
+        <div class="column medium-3 menulogo">
           <img class="imgvertical" src="<?php echo get_template_directory_uri(); ?>/img/logo-ur.png" alt="Corporación Universitaria Reformada">
-          </div>
+        </div>
 
-          <div class="column medium-9 menumen">
+        <div class="column medium-9 menumen">
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+             <?php echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
+          </nav><!-- #site-navigation -->
+        </div>
 
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-
-        
-               <?php echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
-              
-
-            </nav><!-- #site-navigation -->
-
-          </div>
-        
-      </div>
     </div>
-      <!-- Fin Header -->
 
-  </header>
+  </div>
 
 
+  </header><!-- Fin Header -->
+
+<?php get_template_part('template-parts/slider'); ?>
 
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-    <?php get_template_part('template-parts/slider'); ?>
+
+
+    <!-- Admisiones  -->
+    <div class="row">
+
+        <div class="column admisiones-home">
+            <h1>Admisiones</h1>
+            <div class="row">
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-registrarte.png" alt=""><p>RegÍstrate</p></div></div>
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-inscripcion.png" alt=""><p>Inscripción</p></div></div>
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-requisitos.png" alt=""><p>Requisitos</p></div></div>
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-financiacion.png" alt=""><p>Financiación Educativa</p></div></div>
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-puntopago.png" alt=""><p>Puntos de Pago</p></div></div>
+              <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-convenios.png" alt=""><p>Auxilios y Convenios</p></div></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fin Admisiones  -->
+
+
+
+    <div class="row slider-info">
+      <div class="slider-info-inicio">
+            <div class="columns medium-9">
+              <div id="slider-informativo" class="owl-carousel">
+                  <?php $args=array(
+                    'post_type' => 'sliderinformativo',
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'posts_per_page' => -1);
+                  ?>
+                  <?php $slider = new WP_Query($args);?>
+
+                  <?php while($slider->have_posts()):
+                        $slider->the_post();
+                        $image = get_field('imagen');
+                  ?>
+
+                    <div class="owl-slide">
+                        <img class="item" src="<?php echo $image['url']; ?>" />
+                    </div>
+
+                <?php endwhile; wp_reset_postdata(); ?>
+              </div>
+            </div>
+
+            <div class="columns medium-3">
+              <ul class="botones-right-inicio">
+                <li><i class="fa fa-bullseye" aria-hidden="true"></i><p>Resoluciones Rectorales</p></li>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i><p>Calendario Académico</p></li>
+                <li class="doblelinea"><i class="fa fa-cube" aria-hidden="true"></i><p>Sistema de Información Académico</p></li>
+                <li><i class="fa fa-book" aria-hidden="true"></i><p>Instructivo SIA CUR</p></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+
+
+<!-- Buscador de programas  -->
+    <div class="row buscador-programas">
+      <div class="column">
+        <div class="buscador-programas-inicio">
+          <h1>Búsca tu programa a estudiar</h1>
+          <input type="text" name="searchProgramas" value="" placeholder="Ej: Ingenieria Ambiental ">
+          <div class="boton-programas">Ver todos los programas</div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Noticias -->
+
+
+  <?php $args=array(
+    'post_type' => 'post',
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
+    'posts_per_page' => -1,
+    'cat' => 3
+  );?>
+  <?php $consulta = new WP_Query($args);?>
+
+<div class="noticias-inicio">
+    <div class="row">
+      <div class="column">
+        <h1>Noticias</h1>
+
+        <div id="noticias-inicio" class="owl-carousel">
+          <?php while($consulta->have_posts()): $consulta->the_post(); ?>
+            <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'Medium'); ?>
+            <div class="item">
+              <div class="noticiaitem" style="background: url(<?php print_r($thumb[0]); ?>) no-repeat; background-size: cover; background-position: center center;">
+                <div class="textonoticia"><p><?php echo mb_strimwidth(get_the_title(), 0, 70);  ?></p></div>
+                <div class="iconodetalles">
+                  <a href="<?php the_permalink();?>">
+                    <div class="linknoticias"> + </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; wp_reset_postdata(); ?>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<!-- Eventos y Videos -->
+<div class="eventosyvideos">
 
     <div class="row">
 
-        <?php
-        if ( have_posts() ) :
+      <div class="columns large-6 medium-12 bloque1">
+          <h1>Eventos</h1>
 
-          if ( is_home() && ! is_front_page() ) : ?>
-            <header>
-              <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-            </header>
+          <div class="lineagris"></div>
+          <div class="eventoitem">
 
-          <?php
-          endif;
+            <div class="fechaevento">
+              <div class="emes">ABR</div>
+              <div class="edia">17</div>
+            </div>
 
-          /* Start the Loop */
-          while ( have_posts() ) : the_post();
+            <div class="tituloevento">
+              <p>Conferencia El desarrollo Humano en las Organizaciones productivas. Retos del especialista frente al malestar en el trabajo</p>
+            </div>
 
-            /*
-             * Include the Post-Format-specific template for the content.
-             * If you want to override this in a child theme, then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'template-parts/content', get_post_format() );
+            <div class="iconodetalles">
+              <a href="<?php the_permalink();?>">
+                <div class="linknoticias"> + </div>
+              </a>
+            </div>
 
-          endwhile;
+          </div>
 
-          the_posts_navigation();
+          <div class="clear"></div>
 
-        else :
+      </div>
 
-          get_template_part( 'template-parts/content', 'none' );
+      <div class="columns large-6 medium-12 bloque2">
+          <h1>Videos</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptas culpa quam aperiam fugiat. Ex placeat, enim laboriosam obcaecati aspernatur maxime quo praesentium. Quod alias facilis quis totam cumque esse!</p>
 
-        endif; ?>
+      </div>
 
+    </div>
 
-    </div><!-- #container -->
+</div>
+
+<!-- Iconos Secciones -->
+    <div class="row">
+      <div class="column"></div>
+    </div>
 
 
     </main><!-- #main -->
   </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
