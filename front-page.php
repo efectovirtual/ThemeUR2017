@@ -259,9 +259,19 @@ get_header(); ?>
 </div>
 
 <!-- Iconos Secciones -->
+
+  <div class="iconossecciones">
     <div class="row">
-      <div class="column"></div>
+        <div class="column">
+            <ul>
+              <li><img src="<?php echo get_template_directory_uri(); ?>/img/idi-idiomas.png" alt=""></li>
+              <li><img src="<?php echo get_template_directory_uri(); ?>/img/emas-icon-2017.png" alt=""></li>
+              <li><img src="<?php echo get_template_directory_uri(); ?>/img/bibliotecaUR.png" alt=""></li>
+              <li><img src="<?php echo get_template_directory_uri(); ?>/img/bt-camara.png" alt=""></li>
+            </ul>
+      </div>
     </div>
+  </div>
 
 
     </main><!-- #main -->

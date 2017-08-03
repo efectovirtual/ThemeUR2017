@@ -1,12 +1,15 @@
 
-$colorFondo: #f4f4f4;
+$colorFondo: #ececec;
+
 $colorBlueTop: #0059a5;
 $colorBlueFuerte: #00427a;
 $colorBlueSearch: #003e73;
-$colorAmarillo: #ffde02;
-$colorGris: #8e8e8e;
 $colorBlueLink: #003d7c;
 $colorBlueHover: #056cd5;
+
+$colorAmarillo: #ffde02;
+$colorGris: #8e8e8e;
+
 $fuentePrincipal: 'Lato', sans-serif;
 
 @mixin iconos($color: #fff, $tam: 25px) {
@@ -782,6 +785,85 @@ h1.entry-title{
 
     &:hover{
       color: #add6fa;
+    }
+  }
+
+}
+
+.iconossecciones{
+  margin: 50px 0 0 0;
+  text-align: center;
+
+  .row{
+    background: #fff;
+    padding: 50px 0;
+  }
+
+  li{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.site-footer{
+
+  .redes-sociales-footer{
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 20px;
+    height: 60px;
+    padding-top: 15px;
+
+    a{
+      padding: 0 20px;
+      font-size: 30px;
+    }
+  }
+
+  .info-footer{
+    text-align: center;
+    background: $colorBlueFuerte;
+
+    .logofooter{
+      padding: 60px 0;
+    }
+  }
+
+  .derechosfooter{
+    padding: 20px 0;
+    background: $colorBlueTop;
+  }
+
+  .menufooter{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 12px 0;
+
+    nav{
+      text-align: center;
+
+      li{
+        padding: 0 10px;
+        a{
+          color: #fff;
+          font-size: rem-calc(18);
+        }
+      }
+
+
+    }
+
+  }
+
+  .footerdatosur{
+    font-size: 20px;
+    margin: 60px 0;
+  }
+
+  .vigilada-footer{
+    padding-bottom: 40px;
+    p{
+      font-size: 14px;
     }
   }
 
