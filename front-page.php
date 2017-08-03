@@ -57,7 +57,13 @@ get_header(); ?>
 
         <div class="column large-9 menumen">
           <nav id="site-navigation" class="main-navigation" role="navigation">
-             <?php echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
+            <?php wp_nav_menu( array(
+              'theme_location' => 'primary',
+              'menu_id' => 'main-menu',
+              'items_wrap' => '<ul id="%1$s" class="%2$s menu vertical medium-horizontal text-center">%3$s</ul>',
+            ) ); ?>
+
+             <?php //echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
           </nav><!-- #site-navigation -->
         </div>
 

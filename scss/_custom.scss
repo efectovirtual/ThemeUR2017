@@ -44,6 +44,9 @@ $fuentePrincipal: 'Lato', sans-serif;
   }
 }
 
+.menu.medium-horizontal>li{
+  display: inline-block;
+}
 
 
 body{
@@ -383,28 +386,12 @@ h1.entry-title{
       text-align: right;
       margin-top: -15px;
     }
-    .menu-icon{
-      @include hamburger(#fff, #fff, 30px, 20px, 4px, 3);
-      box-shadow: none !important;
-
-      &:after{
-        border-radius: 5px;
-      }
-
-    }
-
-    li{
-      float: none;
-    }
   }
 
   .menumen{
 
-
     nav{
-
       margin-top: 10px;
-
       a{
         color: #fff;
         text-transform: uppercase;
@@ -413,18 +400,12 @@ h1.entry-title{
         margin-right: 20px;
         letter-spacing: -1px;
       }
-
-
     }
   }
-
   @include menuStilo(0,0,0,.7);
-
-
 }
 
 #mega-menu-wrap-primary{
-
   li{
     a{
       line-height: 20px !important;
@@ -483,12 +464,12 @@ h1.entry-title{
 
 
 
-.row .column.medium-8.bartopxpand{
-  padding-right: 0 !important;
+.row .column.large-8.bartopxpand{
+  padding: 0 !important;
   width: 72%;
 }
 
-.row .column.medium-4.bartopxpand{
+.row .column.large-4.bartopxpand{
   width: 28%;
 }
 

@@ -41,8 +41,13 @@
 
 			<div class="menufooter">
 				<div class="row">
-					<nav class="nav" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+					<nav class="footermenu">
+						<?php wp_nav_menu( array(
+							'theme_location' => 'footer',
+							'menu_id' => 'footer-menu',
+							'items_wrap' => '<ul id="%1$s" class="%2$s menu vertical medium-horizontal text-center">%3$s</ul>',
+						) ); ?>
+
 					</nav>
 				</div>
 			</div>

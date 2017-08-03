@@ -1,52 +1,156 @@
-@media screen and (max-width: 1100px) {
-  .contacto-top{
-      margin-top: 0px;
+
+
+@media screen and (max-width: 1200px) {
+
+
+  .bartop{
+
+    li{
+      padding: 0 10px;
+
+      i{
+        padding-right: 5px;
+        font-size: 18px;
+      }
+
+      .fa-money{
+        font-size: 20px;
+      }
+    }
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 200px;
+      background-position: center right 12px;
+    }
+
   }
 
-  .binicio{
-    height: auto;
-    max-height: 500px !important;
+  .menumen{
+    nav{
+      a{
+        font-size: 17px !important;
+        padding: 0 18px !important;
+      }
+    }
   }
+
+
 }
 
-@media screen and (max-width: $maximo-ancho) {
+@media screen and (max-width: 1100px) {
 
-  .orbit-slides-container, .orbit-container{
-      height: auto !important;
+
+    .bartop{
+
+      li{
+        padding: 0 5px;
+
+        i{
+          padding-right: 5px;
+          font-size: 16px;
+        }
+
+        .fa-money{
+          font-size: 18px;
+        }
+      }
+
+      input[type='search']{
+        padding: 7px 40px 7px 15px;
+        width: 190px;
+        font-size: 14px;
+        background-position: center right 12px;
+      }
+
+    }
+
+    .menumen{
+      nav{
+        a{
+          font-size: 16px !important;
+          padding: 0 15px !important;
+        }
+      }
+    }
+
+    .header{
+      text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px) {
+  .menumen{
+    display: none;
   }
-
-  .orbit-container .orbit-slides-container li.active{
-      position: static;
-  }
-
-    li.orbit-slide{
-    background-size: cover !important;
-  }
-
 }
 
 @media screen and (max-width: 1000px) {
 
-  .left-bg-service{
+  .skew-bar{
+    display: none;
+  }
 
-    ul{
-      padding-left: 0px;
-    }
+  .row .column.large-8.bartopxpand,
+  .row .column.large-4.bartopxpand{
+    width: 100%;
+  }
+
+
+  .bartop{
+    text-align: center;
 
     li{
-      text-align: center;
-      display: inline-block;
-      padding: 5px;
+      padding: 0 10px;
+
+      i{
+        padding-right: 5px;
+        font-size: 16px;
+      }
+
+      .fa-money{
+        font-size: 18px;
+      }
+    }
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 190px;
+      font-size: 14px;
+      background-position: center right 12px;
     }
 
   }
 
-  // .site-main{
-  //   padding: 0 20px 0 20px;
-  // }
 
-  .owl-slide{
-    background-size: cover !important;
+}
+
+@media screen and (max-width: 750px) {
+
+  .bartop{
+    height: auto;
+    padding-bottom: 1px;
+
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 300px;
+      font-size: 14px;
+      background-position: center right 12px;
+    }
+
   }
+
+  .main-navigation.footermenu{
+    display: block;
+  }
+
+}
+
+
+@media screen and (max-width: 350px) {
+
 
 }
