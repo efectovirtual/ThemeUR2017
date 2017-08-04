@@ -52,18 +52,12 @@ get_header(); ?>
     <div class="row align-justify header">
 
         <div class="column large-3 menulogo">
-          <img class="imgvertical" src="<?php echo get_template_directory_uri(); ?>/img/logo-ur.png" alt="Corporación Universitaria Reformada">
+          <img  src="<?php echo get_template_directory_uri(); ?>/img/logo-ur.png" alt="Corporación Universitaria Reformada">
         </div>
 
         <div class="column large-9 menumen">
           <nav id="site-navigation" class="main-navigation" role="navigation">
-            <?php wp_nav_menu( array(
-              'theme_location' => 'primary',
-              'menu_id' => 'main-menu',
-              'items_wrap' => '<ul id="%1$s" class="%2$s menu vertical medium-horizontal text-center">%3$s</ul>',
-            ) ); ?>
-
-             <?php //echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
+             <?php echo do_shortcode( '[maxmegamenu location=primary]' ); ?>
           </nav><!-- #site-navigation -->
         </div>
 
@@ -103,7 +97,7 @@ get_header(); ?>
 
       <div class="row slider-info">
         <div class="slider-info-inicio">
-              <div class="columns medium-9">
+              <div class="columns large-9 medium-7">
                 <div id="slider-informativo" class="owl-carousel">
                     <?php $args=array(
                       'post_type' => 'sliderinformativo',
@@ -126,7 +120,7 @@ get_header(); ?>
                 </div>
               </div>
 
-              <div class="columns medium-3">
+              <div class="columns large-3 medium-5">
                 <ul class="botones-right-inicio">
                   <li><i class="fa fa-bullseye" aria-hidden="true"></i><p>Resoluciones Rectorales</p></li>
                   <li><i class="fa fa-calendar" aria-hidden="true"></i><p>Calendario Académico</p></li>
@@ -208,9 +202,10 @@ get_header(); ?>
 
         <?php while($consulta->have_posts()): $consulta->the_post(); ?>
 
-            <div class="lineagris"></div>
+
             <div class="eventoitem">
 
+            <div class="lineagris"></div>
               <div class="fechaevento">
                 <div class="emes"><?php the_field('Mes'); ?></div>
                 <div class="edia"><?php the_field('dia'); ?></div>

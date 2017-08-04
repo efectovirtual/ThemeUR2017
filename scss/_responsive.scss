@@ -26,11 +26,43 @@
 
   }
 
+.slider-info{
+
+  .botones-right-inicio{
+    li{
+      margin-bottom: 10px;
+      padding: 15px;
+      i{
+        font-size: 25px;
+        float: left;
+        padding-right: 5px;
+      }
+
+      p{
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+        padding-top: 5px;
+      }
+
+    }
+  }
+}
+
   .menumen{
     nav{
       a{
         font-size: 17px !important;
         padding: 0 18px !important;
+      }
+    }
+  }
+
+
+  .eventosyvideos{
+    .eventoitem{
+      .tituloevento{
+        width: 350px;
       }
     }
   }
@@ -79,15 +111,70 @@
     }
 
 
+    .slider-info{
+
+      .botones-right-inicio{
+        li{
+          i{
+            font-size: 20px;
+          }
+
+          p{
+            font-size: 14px;
+            padding-top: 3px;
+          }
+
+        }
+      }
+    }
+
+
+    .eventosyvideos{
+      .eventoitem{
+        .tituloevento{
+          width: 300px;
+        }
+      }
+    }
+
 }
+
 
 @media screen and (max-width: 1020px) {
   .menumen{
-    display: none;
+    nav{
+      a{
+        font-size: 18px !important;
+        padding: 0 18px !important;
+      }
+    }
   }
+
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        margin-bottom: 2px;
+        padding: 7px;
+        height: 50px;
+        i{
+          font-size: 30px;
+        }
+
+        p{
+          font-size: 16px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
 }
 
+
+
+
 @media screen and (max-width: 1000px) {
+
 
   .skew-bar{
     display: none;
@@ -124,10 +211,37 @@
 
   }
 
+  .owl-slide{
+    background-size: cover !important;
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+      width: 440px;
+      margin: 0 auto;
+    }
+    .large-6 {
+      width: 100%;
+    }
+  }
 
 }
 
 @media screen and (max-width: 750px) {
+
+  .rheader{
+    position: relative;
+    background: none;
+  }
+
+  .header{
+    padding-top: 0;
+  }
+
+  .menulogo{
+    padding: 25px 0 25px 0;
+    background: #00427a;
+  }
 
   .bartop{
     height: auto;
@@ -143,14 +257,118 @@
 
   }
 
+
   .main-navigation.footermenu{
     display: block;
   }
 
+
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        i{
+          font-size: 20px;
+        }
+
+        p{
+          font-size: 14px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 620px) {
+
+  .menu.medium-horizontal>li{
+    display: block !important;
+  }
+  #slider-informativo{
+    padding-bottom: 30px;
+  }
+
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        padding: 10px;
+        i{
+          font-size: 30px;
+        }
+
+        p{
+          font-size: 16px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+      width: 100%;
+
+        .fechaevento, .tituloevento, .iconodetalles{
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .iconodetalles{
+          width: 100%;
+
+          .linknoticias{
+            width: 100%;
+          }
+        }
+
+    }
+  }
+
+
+
 }
 
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
 
+  .admisiones-home .boton-admin p{
+    font-size: 12px;
+  }
+  .buscador-programas-inicio .boton-programas{
+    width: 100%;
+  }
+
+  .site-footer{
+    .redes-sociales-footer{
+      a{
+        padding: 0 2px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  h1{
+    font-size: 30px !important;
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+
+        .tituloevento{
+          width: 150px;
+        }
+
+        .iconodetalles{
+          width: 100%;
+
+          .linknoticias{
+            width: 100%;
+          }
+        }
+      }
+    }
 
 }

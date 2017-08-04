@@ -65,6 +65,11 @@
         }
 
 
+        if (jQuery(window).width() <= 850) {
+          jQuery('#responsive-menu br').remove();
+        }
+
+
 
     });
 

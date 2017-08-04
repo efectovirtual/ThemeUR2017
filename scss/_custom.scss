@@ -45,7 +45,7 @@ $fuentePrincipal: 'Lato', sans-serif;
 }
 
 .menu.medium-horizontal>li{
-  display: inline-block;
+  display: inline-block !important;
 }
 
 
@@ -787,7 +787,6 @@ h1.entry-title{
 }
 
 .site-footer{
-
   .redes-sociales-footer{
     background: #1a1a1a;
     color: #fff;
