@@ -2,7 +2,6 @@
 
 @media screen and (max-width: 1200px) {
 
-
   .bartop{
 
     li{
@@ -21,7 +20,6 @@
     input[type='search']{
       padding: 7px 40px 7px 15px;
       width: 200px;
-      background-position: center right 12px;
     }
 
   }
@@ -92,8 +90,7 @@
         padding: 7px 40px 7px 15px;
         width: 190px;
         font-size: 14px;
-        background-position: center right 12px;
-      }
+        }
 
     }
 
@@ -187,7 +184,7 @@
 
 
   .bartop{
-    text-align: center;
+    text-align: center !important;
 
     li{
       padding: 0 10px;
@@ -206,7 +203,6 @@
       padding: 7px 40px 7px 15px;
       width: 190px;
       font-size: 14px;
-      background-position: center right 12px;
     }
 
   }
@@ -225,6 +221,14 @@
     }
   }
 
+}
+
+@media screen and (max-width: 850px) {
+  .banner-page-general{
+    h1{
+      font-size: 40px;
+    }
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -252,7 +256,6 @@
       padding: 7px 40px 7px 15px;
       width: 300px;
       font-size: 14px;
-      background-position: center right 12px;
     }
 
   }
@@ -275,6 +278,18 @@
           padding-top: 5px;
         }
       }
+    }
+  }
+
+
+  .header-interno{
+    .header{
+      padding: 0 0;
+    }
+
+    .menulogo{
+      padding: 25px 0 25px 0;
+      background: #fff;
     }
   }
 
@@ -370,5 +385,14 @@
         }
       }
     }
+  .bartop{
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 100%;
+      font-size: 14px;
+      // background-position: center right;
 
+
+    }
+  }
 }

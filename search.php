@@ -6,46 +6,22 @@
  *
  * @package Ureformada
  */
+ get_header(); ?>
+ <?php get_template_part('template-parts/header-interno'); ?>
 
-get_header(); ?>
+ 	<div id="primary" class="content-area">
+ 		<main id="main" class="site-main">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+ 					<?php
+ 					while ( have_posts() ) : the_post();
 
-		<?php
-		if ( have_posts() ) : ?>
+ 						get_template_part( 'template-parts/content', 'page-general' );
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ureformada' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
+ 					endwhile; // End of the loop.
+ 					?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+ 		</main><!-- #main -->
+ 	</div><!-- #primary -->
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+ <?php
+ get_footer();

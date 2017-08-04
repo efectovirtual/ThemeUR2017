@@ -1,4 +1,9 @@
 
+function quitarbr(){
+  if (jQuery(window).width() <= 850) {
+    jQuery('#responsive-menu br').remove();
+  }
+}
 
     jQuery(document).ready(function(){
 
@@ -64,14 +69,11 @@
           jQuery('.custom-control').find('[data-slide="'+owl.currentItem +'"]').addClass('active').attr('disabled', 'disabled');
         }
 
-
-        if (jQuery(window).width() <= 850) {
-          jQuery('#responsive-menu br').remove();
-        }
-
-
+        quitarbr();
+        jQuery(window).resize(quitarbr);
 
     });
+
 
 
 jQuery(document).foundation();
