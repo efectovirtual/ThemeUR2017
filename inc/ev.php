@@ -131,6 +131,47 @@ function slider_videos()
 {
     register_taxonomy_for_object_type('category', 'ureformada'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'ureformada');
+    register_post_type('programas', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Programas', 'ureformada'), // Rename these to suit
+            'singular_name' => __('Programas', 'ureformada'),
+            'add_new' => __('Add New', 'ureformada'),
+            'add_new_item' => __('Add New Programas', 'ureformada'),
+            'edit' => __('Edit', 'ureformada'),
+            'edit_item' => __('Edit Programas', 'ureformada'),
+            'new_item' => __('New Programas', 'ureformada'),
+            'view' => __('View Programas', 'ureformada'),
+            'view_item' => __('View Programas', 'ureformada'),
+            'search_items' => __('Search Programas', 'ureformada'),
+            'not_found' => __('No Programas found', 'ureformada'),
+            'not_found_in_trash' => __('No Programas found in Trash', 'ureformada')
+        ),
+        'public' => true,
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => false,
+        'menu_position' => 6,
+        'supports' => array(
+            'title',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+
+        ) // Add Category and Post Tags support
+    ));
+}
+
+add_action('init','slider_videos'); // Videos inicio
+
+
+
+// Videos
+function slider_programas()
+{
+    register_taxonomy_for_object_type('category', 'ureformada'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'ureformada');
     register_post_type('videos', // Register Custom Post Type
         array(
         'labels' => array(
@@ -163,7 +204,7 @@ function slider_videos()
     ));
 }
 
-add_action('init','slider_videos'); // Videos inicio
+add_action('init','slider_programas'); // Videos inicio
 
 
 function my_acf_google_map_api( $api ){

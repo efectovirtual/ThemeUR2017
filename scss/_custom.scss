@@ -924,7 +924,7 @@ h1.entry-title{
   }
 }
 
-.column.contenido-page-general{
+.column.contenido-page-general, .detalles-programas{
   margin-top: 40px;
   background: #fff;
   padding: 10px 50px 30px 50px;
@@ -946,5 +946,333 @@ h1.entry-title{
     font-weight: 300;
   }
 
+}
+
+// Programas
+
+.banner-programas{
+  background: $colorBlueFuerte;
+  width: 100%;
+
+  .img-programa-banner{
+    height: 350px;
+  }
+
+  .info-banner-programas{
+    padding-top: 80px;
+    h1{
+      font-size: 45px;
+      color: #fff;
+      font-weight: 900;
+      line-height: 45px;
+      margin: 0;
+    }
+
+    .snies{
+      font-size: 25px;
+      font-weight: 300;
+      color: #fff;
+      margin: 0;
+    }
+
+    .registro{
+      font-size: 16px;
+      font-weight: 300;
+      color: #fff;
+      margin: 0;
+    }
+
+  }
+}
+
+.info-institucion{
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  background: $colorBlueTop;
+  p{
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+  }
 
 }
+
+
+.informacion-programa{
+  li{
+    display: block;
+    height: 50px;
+
+    p{
+      line-height: 16px;
+      font-size: 16px;
+      color: #3e3e3e;
+
+      strong{
+        font-size: 18px;
+        color: $colorBlueLink;
+      }
+    }
+  }
+
+  .columns{
+    padding: 45px 10px 0 0;
+  }
+  .colorfondo-iprograma2{
+    background: #e2e2e2;
+  }
+}
+
+.formulario-programas{
+  background: #fff;
+  padding: 45px 100px;
+
+  h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  input[type='text']{
+    padding: 5px 10px;
+    color: $colorGrisMenu !important;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $colorGrisMenu !important;
+  }
+  :-moz-placeholder {
+      color: $colorGrisMenu !important;
+  }
+  ::-moz-placeholder {
+      color: $colorGrisMenu !important;
+  }
+  :-ms-input-placeholder {
+      color: $colorGrisMenu !important;
+  }
+
+  .botonsubmit{
+    text-align: center;
+
+    input{
+      padding: 12px;
+      background: $colorBlueTop;
+      color: #fff;
+      border-radius: 20px;
+      width: 200px;
+      border: 0;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.detalles-programas{
+  padding-top: 40px;
+
+
+  .row{
+    background: #fff;
+  }
+
+}
+
+
+/* TABS */
+.responsive-tabs{
+	font-family:"Lato",sans-serif
+}
+
+.responsive-tabs .responsive-tabs__list__item{
+	width:23% !important;
+	height:95px;
+	padding:35px 0 0 2px !important;
+	margin:0 5px 0 5px !important;
+	color:#fff !important;
+	font-weight:500 !important;
+	text-align:center;
+	line-height:75px
+}
+
+.responsive-tabs .responsive-tabs__list__item--active,
+.responsive-tabs .responsive-tabs__list__item--active:hover{
+	top:0px !important;
+	margin:0 5px 0 5px !important;
+	border:0 !important;
+	font-weight:700 !important
+}
+
+.responsive-tabs .responsive-tabs__panel{
+	border:0 !important;
+	border-top:0px solid #222e81 !important
+}
+
+.responsive-tabs .responsive-tabs__list__item--active::after{
+	border-color:#222f82 transparent !important;
+	content:"";
+	position:absolute;
+	bottom:-12px;
+	left:50%;
+	border-width:12px 12px 0;
+	border-style:solid;
+	display:block;
+	width:0;
+	margin-left:-12px
+}
+
+.tabla-titulo-spreads{width:100%;height:40px;background-color:#1d73ba;color:#fff;text-align:center;line-height:40px;font-size:16px;font-weight:400}#tablist1-tab1{background-color:#106bb5 !important}#tablist1-tab1::after{border-color:#106bb5 transparent !important}#tablist1-tab2{background-color:#015aa3 !important}#tablist1-tab2::after{border-color:#015aa3 transparent !important}#tablist1-tab3{background-color:#004e8e !important}#tablist1-tab3::after{border-color:#004e8e transparent !important}#tablist1-tab4{background-color:#00437a !important}#tablist1-tab4::after{border-color:#00437a transparent !important}#tablist1-tab5{background-color:#00345f !important}#tablist1-tab5::after{border-color:#00345f transparent !important}#tablist1-tab6{background-color:#052743 !important}#tablist1-tab6::after{border-color:#052743 transparent !important}#tablist1-tab7{background-color:#021728 !important}#tablist1-tab7::after{border-color:#021728 transparent !important}
+
+/* FIN TABS */
+
+
+// PLan de Estudio
+
+
+.contenido-semestre-programa{
+
+  .columns{
+    padding: 1%;
+  }
+
+  .semestre-info{
+    height: 150px;
+    background: $colorBlueTop;
+    color: #fff;
+    padding: 5px;
+
+    .numerosemestre{
+      text-align: center;
+      font-size: 70px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .nsemestre{
+      text-align: center;
+      font-size: 30px;
+      margin: 0;
+      margin-top: -30px;
+      text-transform: uppercase;
+    }
+
+
+  }
+
+  .credito-info{
+    height: 150px;
+    background: $colorGris;
+    color: #fff;
+    padding: 5px;
+    padding-top: 35px;
+
+      .numerocredito{
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .ncredito{
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+
+    .programas{
+
+
+      li{
+        display: block;
+        height: 30px;
+        padding: 2px 0 5px 5px;
+      }
+
+      li:nth-child(2n+1){
+        background: #eeeeee;
+      }
+
+    }
+
+    .programas-creditos{
+      li{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        height: 30px;
+        font-weight: 700;
+      }
+
+
+      li:nth-child(2n+1){
+        background: #eeeeee;
+      }
+    }
+
+    .numero-creditos{
+      height: 30px;
+      p{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    .total-creditos{
+      p{
+        height: 30px;
+        font-weight: 700;
+      }
+    }
+
+}
+
+.costos-programas{
+  .programatext, .valortext{
+    text-align: center;
+    font-size: 40px;
+    background: $colorBlueFuerte;
+    padding: 20px;
+    color: #f8f8f8;
+  }
+
+  li{
+    display: block;
+    height: 40px;
+    padding: 5px 10px;
+    margin: 5px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  li:nth-child(2n+1){
+    background: #eeeeee;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fin

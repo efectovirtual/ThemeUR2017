@@ -110,7 +110,7 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 
 		/* css ======== */
 
-		wp_enqueue_style( 'innovate-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'ureformada-style', get_stylesheet_uri() );
 
 		wp_enqueue_style('owlcarouselthemes', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 
 		wp_enqueue_style('owlcarouselthemes', get_template_directory_uri().'/owl-carousel/owl.theme.css');
 
-		wp_enqueue_style('foundationCss', get_template_directory_uri().'/bower_components/foundation-sites/dist/foundation.min.css');
+		// wp_enqueue_style('foundationCss', get_template_directory_uri().'/bower_components/foundation-sites/dist/foundation.min.css');
 
 		wp_enqueue_style('owlcarousel', get_template_directory_uri().'/owl-carousel/owl.carousel.css');
 
@@ -132,15 +132,13 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 
 		wp_enqueue_script('jquery');
 
-		wp_enqueue_script( 'innovate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+		wp_enqueue_script( 'ureformada-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-		wp_enqueue_script( 'innovate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+		wp_enqueue_script( 'ureformada-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 		wp_enqueue_script('foundation-js', get_template_directory_uri().'/bower_components/foundation-sites/dist/foundation.js', array(), '6.2.3', true );
 
 		wp_enqueue_script('what-input', get_template_directory_uri().'/bower_components/what-input/what-input.js', array(), '6.2.3', true );
-
-		wp_enqueue_script('appjs', get_template_directory_uri().'/js/app.js', array(), '6.2.3', true );
 
 		wp_enqueue_script('owlcarouselJS', get_template_directory_uri().'/owl-carousel/owl.carousel.js', array(), '1.3.1', true );
 
@@ -151,6 +149,9 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 		//
 	  // wp_enqueue_script('gmap','https://maps.googleapis.com/maps/api/js?key=AIzaSyAotgXiiIPK1kGYcLrm0FBiB-dyW6EuAvc', array(), '1.3.1');
 
+		wp_enqueue_script('evJS', get_template_directory_uri().'/js/app-ev.js', array(), '1.2.4', true );
+
+		wp_enqueue_script('appjs', get_template_directory_uri().'/js/app.js', array(), '6.2.3', true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

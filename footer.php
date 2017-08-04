@@ -18,10 +18,10 @@
 			<div class="medium-12 columns">
 				Síguenos en:
 				<div id="socialicons">
-					<a class="icon" href="#" title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a class="icon" href="#" title="Follow with Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-					<a class="icon" href="#" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a class="icon" href="#" title="Follow with YouTube" target="_blank"><i class="fa fa-youtube"></i></a>
+					<a class="icon" href="https://www.facebook.com/UniReformada-164528480309606/" title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a class="icon" href="https://www.instagram.com/unireformada/" title="Follow with Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a class="icon" href="https://twitter.com/unireformada" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a class="icon" href="https://www.youtube.com/channel/UCbfreHkeqjZgMQoCeL9boCA" title="Follow with YouTube" target="_blank"><i class="fa fa-youtube"></i></a>
 			</div>
 			</div>
 		</div>
