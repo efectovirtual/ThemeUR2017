@@ -398,7 +398,7 @@ h1.entry-title{
         font-weight: 500;
         margin-right: 20px;
         letter-spacing: -1px;
-        
+
       }
     }
   }
@@ -422,8 +422,12 @@ h1.entry-title{
 
   li{
     display: inline-block;
-    color: #fff;
     padding: 0 15px 0 15px;
+    color: #fff;
+
+    a{
+      color: #fff;
+    }
 
     i{
       padding-right: 5px;
@@ -1051,6 +1055,10 @@ h1.entry-title{
     color: $colorGrisMenu !important;
   }
 
+  input[type='email']{
+    @extend input[type='text'];
+  }
+
   ::-webkit-input-placeholder {
     color: $colorGrisMenu !important;
   }
@@ -1064,20 +1072,21 @@ h1.entry-title{
       color: $colorGrisMenu !important;
   }
 
-  .botonsubmit{
-    text-align: center;
+}
 
-    input{
-      padding: 12px;
-      background: $colorBlueTop;
-      color: #fff;
-      border-radius: 20px;
-      width: 200px;
-      border: 0;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+.botonsubmit{
+  text-align: center;
+
+  input{
+    padding: 12px;
+    background: $colorBlueTop;
+    color: #fff;
+    border-radius: 20px;
+    width: 200px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }
 
@@ -1266,19 +1275,59 @@ h1.entry-title{
 }
 
 
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item-has-children > a.mega-menu-link::after{
+  margin: 0 !important;
+}
+
+.no100{
+  width: auto !important;
+  height: auto;
+}
 
 
+.centrar-contenido{
+  text-align: center !important;
+  margin: 0 auto !important;
+  img{
+    margin: 0 auto !important;
+  }
+}
 
+// Acordeon
 
+.column.contenido-page-general li, .contenido-page-general.columns li, .detalles-programas li{
+  padding-bottom: 0;
 
+}
 
+.column.contenido-page-general p, .contenido-page-general.columns p, .detalles-programas p{
+  margin: 0;
+}
 
+.accordion-title{
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: $colorBlueSearch;
 
+  &:hover{
+    background: $colorBlueHover;
+    color: #fff;
+  }
 
+  &:visited{
+    color: #fff;
+  }
+}
 
+.accordion-title:hover, .accordion-title:focus{
+  background: $colorBlueHover;
+  color: #fff;
+}
 
-
-
+.accordion-content{
+  color: #3f3f3f;
+}
 
 
 

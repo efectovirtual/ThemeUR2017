@@ -25,27 +25,7 @@ get_header(); ?>
       <div class="column large-4 medium-12 bartopxpand"></div>
       <div class="column large-8 medium-12 bartopxpand">
         <div class="skew-bar"></div>
-        <div class="bartop">
-          <ul>
-            <li><p>Llámanos: <strong>361-04-32</strong></p></li>
-            <li><p><i class="fa fa-money" aria-hidden="true"></i>Pagos</p></li>
-            <li><p><i class="fa fa-briefcase" aria-hidden="true"></i>Portal de empleo</p></li>
-            <li><p><i class="fa fa-envelope" aria-hidden="true"></i>Email</p></li>
-            <li><div class="buscadortop">
-
-            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-
-                <input type="search" class="search-field"
-            placeholder="<?php echo esc_attr_x( 'Ingresa tu búsqueda... ', 'placeholder' ) ?>"
-            value="<?php echo get_search_query() ?>" name="s"
-            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-
-            </form>
-
-            </div></li>
-          </ul>
-
-        </div>
+        <?php get_template_part('template-parts/bartop'); ?>
       </div>
     </div>
 
@@ -74,19 +54,18 @@ get_header(); ?>
       <main id="main" class="site-main">
 
 
-
       <!-- Admisiones  -->
       <div class="row">
 
           <div class="column admisiones-home">
               <h1>Admisiones</h1>
               <div class="row">
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-registrarte.png" alt=""><p>RegÍstrate</p></div></div>
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-inscripcion.png" alt=""><p>Inscripción</p></div></div>
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-requisitos.png" alt=""><p>Requisitos</p></div></div>
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-financiacion.png" alt=""><p>Financiación Educativa</p></div></div>
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-puntopago.png" alt=""><p>Puntos de Pago</p></div></div>
-                <div class="columns large-2 medium-4 small-6"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-convenios.png" alt=""><p>Auxilios y Convenios</p></div></div>
+                <div class="columns large-2 medium-4 small-6"><a href="<?php echo site_url(); ?>/registrate/"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-registrarte.png" alt=""><p>RegÍstrate</p></div></a></div>
+                <div class="columns large-2 medium-4 small-6"><a href="http://iceberg.unireformada.edu.co:8080/sinugwt/inscripciones.jsp#home"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-inscripcion.png" alt=""><p>Inscripción</p></div></a></div>
+                <div class="columns large-2 medium-4 small-6"><a href="<?php echo site_url(); ?>/requisitos/"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-requisitos.png" alt=""><p>Requisitos</p></div></a></div>
+                <div class="columns large-2 medium-4 small-6"><a href="<?php echo site_url(); ?>/financiacion/"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-financiacion.png" alt=""><p>Financiación Educativa</p></div></a></div>
+                <div class="columns large-2 medium-4 small-6"><a href="<?php echo site_url(); ?>/puntos-y-medios-de-pago/"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-puntopago.png" alt=""><p>Puntos de Pago</p></div></a></div>
+                <div class="columns large-2 medium-4 small-6"><a href="<?php echo site_url(); ?>/auxilios-academicos/"><div class="boton-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/iconos/ico-convenios.png" alt=""><p>Auxilios y Convenios</p></div></a></div>
               </div>
           </div>
 
@@ -122,10 +101,10 @@ get_header(); ?>
 
               <div class="columns large-3 medium-5">
                 <ul class="botones-right-inicio">
-                  <li><i class="fa fa-bullseye" aria-hidden="true"></i><p>Resoluciones Rectorales</p></li>
-                  <li><i class="fa fa-calendar" aria-hidden="true"></i><p>Calendario Académico</p></li>
-                  <li class="doblelinea"><i class="fa fa-cube" aria-hidden="true"></i><p>Sistema de Información Académico</p></li>
-                  <li><i class="fa fa-book" aria-hidden="true"></i><p>Instructivo SIA CUR</p></li>
+                  <a href="<?php echo site_url(); ?>/resoluciones-rectorales/"><li><i class="fa fa-bullseye" aria-hidden="true"></i><p>Resoluciones Rectorales</p></li></a>
+                  <a href="<?php echo site_url(); ?>/calendario-academico/"><li><i class="fa fa-calendar" aria-hidden="true"></i><p>Calendario Académico</p></li></a>
+                  <a href="http://iceberg.unireformada.edu.co:8080/sinugwt/"><li class="doblelinea"><i class="fa fa-cube" aria-hidden="true"></i><p>Sistema de Información Académico</p></li></a>
+                  <a href="<?php echo site_url(); ?>/instructivo-sia-cur/"><li><i class="fa fa-book" aria-hidden="true"></i><p>Instructivo SIA CUR</p></li></a>
                 </ul>
               </div>
         </div>
