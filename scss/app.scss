@@ -1,16 +1,16 @@
 @charset 'utf-8';
 
-@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic';
-@import 'https://fonts.googleapis.com/css?family=Nunito:300,400,700';
-
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
+@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic';
+@import 'https://fonts.googleapis.com/css?family=Nunito:300,400,700';
+
+
 @include foundation-global-styles;
-//@include foundation-grid;
+@include foundation-grid;
 // @include foundation-flex-grid;
-@include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -21,21 +21,19 @@
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
-@include foundation-card;
 @include foundation-close-button;
 @include foundation-menu;
 @include foundation-menu-icon;
 @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
-@include foundation-responsive-embed;
+@include foundation-flex-video;
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
-// @include foundation-progress-element;
 // @include foundation-progress-element;
 // @include foundation-meter-element;
 @include foundation-slider;
@@ -49,14 +47,11 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-// @include foundation-float-classes;
-@include foundation-flex-classes;
-
-// @include foundation-prototype-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
 @import 'custom';
 @import 'responsive';
-

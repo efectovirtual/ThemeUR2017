@@ -10,10 +10,6 @@
 /// @type List
 $dropdown-padding: 1rem !default;
 
-/// Background for dropdown panes.
-/// @type Color
-$dropdown-background: $body-background !default;
-
 /// Border for dropdown panes.
 /// @type List
 $dropdown-border: 1px solid $medium-gray !default;
@@ -40,29 +36,19 @@ $dropdown-sizes: (
 
 /// Applies styles for a basic dropdown.
 @mixin dropdown-container {
-  position: absolute;
-  z-index: 10;
-
-  width: $dropdown-width;
-  padding: $dropdown-padding;
-
-  visibility: hidden;
-  display: none;
+  background-color: $body-background;
   border: $dropdown-border;
   border-radius: $dropdown-radius;
-  background-color: $dropdown-background;
-
+  display: block;
   font-size: $dropdown-font-size;
-
-
-  // Allow an intermittent state to do positioning before making visible.
-  &.is-opening {
-    display: block;
-  }
+  padding: $dropdown-padding;
+  position: absolute;
+  visibility: hidden;
+  width: $dropdown-width;
+  z-index: 10;
 
   &.is-open {
     visibility: visible;
-    display: block;
   }
 }
 

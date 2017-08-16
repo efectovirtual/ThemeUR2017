@@ -1,47 +1,419 @@
+
+@media screen and (max-width: 2000px) {
+
+    .menumen{
+      nav{
+    .mega-menu-horizontal{
+        a{
+            padding: 0 15px !important;
+        }
+      }
+
+      ul.mega-sub-menu{
+        a{
+          padding: 10px !important;
+        }
+      }
+
+    }
+  }
+
+
+  }
+
+@media screen and (max-width: 1200px) {
+
+  .bartop{
+
+    li{
+      padding: 0 10px;
+
+      i{
+        padding-right: 5px;
+        font-size: 18px;
+      }
+
+      .fa-money{
+        font-size: 20px;
+      }
+    }
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 180px;
+    }
+
+  }
+
+.slider-info{
+
+  .botones-right-inicio{
+    li{
+      margin-bottom: 10px;
+      padding: 15px;
+      i{
+        font-size: 25px;
+        float: left;
+        padding-right: 5px;
+      }
+
+      p{
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+        padding-top: 5px;
+      }
+
+    }
+  }
+}
+
+  .menumen{
+    nav{
+      a{
+        font-size: 16px !important;
+        padding: 0 10px !important;
+      }
+    }
+  }
+
+
+  .eventosyvideos{
+    .eventoitem{
+      .tituloevento{
+        width: 350px;
+      }
+    }
+  }
+
+
+}
+
 @media screen and (max-width: 1100px) {
-  .contacto-top{
-      margin-top: 0px;
-  }
 
-  .binicio{
-    height: auto;
-    max-height: 500px !important;
-  }
+
+    .bartop{
+
+      li{
+        padding: 0 5px;
+
+        i{
+          padding-right: 5px;
+          font-size: 16px;
+        }
+
+        .fa-money{
+          font-size: 18px;
+        }
+      }
+
+      input[type='search']{
+        padding: 7px 40px 7px 15px;
+        width: 190px;
+        font-size: 14px;
+        }
+
+    }
+
+    .menumen{
+      nav{
+        a{
+          font-size: 14px !important;
+          padding: 0 10px !important;
+        }
+      }
+    }
+
+    .header{
+      text-align: center;
+    }
+
+
+    .slider-info{
+
+      .botones-right-inicio{
+        li{
+          i{
+            font-size: 20px;
+          }
+
+          p{
+            font-size: 14px;
+            padding-top: 3px;
+          }
+
+        }
+      }
+    }
+
+
+    .eventosyvideos{
+      .eventoitem{
+        .tituloevento{
+          width: 300px;
+        }
+      }
+    }
+
 }
 
-@media screen and (max-width: $maximo-ancho) {
 
-  .orbit-slides-container, .orbit-container{
-      height: auto !important;
+@media screen and (max-width: 1020px) {
+  .menumen{
+    nav{
+      a{
+        font-size: 16px !important;
+        padding: 0 14px !important;
+      }
+    }
   }
 
-  .orbit-container .orbit-slides-container li.active{
-      position: static;
-  }
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        margin-bottom: 2px;
+        padding: 7px;
+        height: 50px;
+        i{
+          font-size: 30px;
+        }
 
-    li.orbit-slide{
-    background-size: cover !important;
+        p{
+          font-size: 16px;
+          padding-top: 5px;
+        }
+      }
+    }
   }
 
 }
+
+
+
 
 @media screen and (max-width: 1000px) {
 
-  .left-bg-service{
 
-    ul{
-      padding-left: 0px;
-    }
+  .skew-bar{
+    display: none;
+  }
+
+  .row .column.large-8.bartopxpand,
+  .row .column.large-4.bartopxpand{
+    width: 100%;
+  }
+
+
+  .bartop{
+    text-align: center !important;
 
     li{
-      text-align: center;
-      display: inline-block;
-      padding: 5px;
+      padding: 0 10px;
+
+      i{
+        padding-right: 5px;
+        font-size: 16px;
+      }
+
+      .fa-money{
+        font-size: 18px;
+      }
+    }
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 190px;
+      font-size: 14px;
+    }
+
+  }
+
+  .owl-slide{
+    background-size: cover !important;
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+      width: 440px;
+      margin: 0 auto;
+    }
+    .large-6 {
+      width: 100%;
     }
   }
 
-  .site-main{
-    padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .banner-page-general{
+    h1{
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .rheader{
+    position: relative;
+    background: none;
   }
 
+  .header{
+    padding-top: 0;
+  }
+
+  .menulogo{
+    padding: 25px 0 25px 0;
+    background: #00427a;
+  }
+
+  .bartop{
+    height: auto;
+    padding-bottom: 1px;
+
+
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 300px;
+      font-size: 14px;
+    }
+
+  }
+
+
+  .main-navigation.footermenu{
+    display: block;
+  }
+
+
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        i{
+          font-size: 20px;
+        }
+
+        p{
+          font-size: 14px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+
+  .header-interno{
+    .header{
+      padding: 0 0;
+    }
+
+    .menulogo{
+      padding: 25px 0 25px 0;
+      background: #fff;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 620px) {
+
+  .menu.medium-horizontal>li{
+    display: block !important;
+  }
+  #slider-informativo{
+    padding-bottom: 30px;
+  }
+
+  .slider-info{
+    .botones-right-inicio{
+      li{
+        padding: 10px;
+        i{
+          font-size: 30px;
+        }
+
+        p{
+          font-size: 16px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+      width: 100%;
+
+        .fechaevento, .tituloevento, .iconodetalles{
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .iconodetalles{
+          width: 100%;
+
+          .linknoticias{
+            width: 100%;
+          }
+        }
+
+    }
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .admisiones-home .boton-admin p{
+    font-size: 12px;
+  }
+  .buscador-programas-inicio .boton-programas{
+    width: 100%;
+  }
+
+  .site-footer{
+    .redes-sociales-footer{
+      a{
+        padding: 0 2px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  h1{
+    font-size: 30px !important;
+  }
+
+  .eventosyvideos{
+    .eventoitem{
+
+        .tituloevento{
+          width: 150px;
+        }
+
+        .iconodetalles{
+          width: 100%;
+
+          .linknoticias{
+            width: 100%;
+          }
+        }
+      }
+    }
+  .bartop{
+    input[type='search']{
+      padding: 7px 40px 7px 15px;
+      width: 100%;
+      font-size: 14px;
+      // background-position: center right;
+
+
+    }
+  }
 }
