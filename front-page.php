@@ -43,16 +43,18 @@ get_header(); ?>
 
     </div>
 
+
   </div>
 
-
   </header><!-- Fin Header -->
+
 
   <?php get_template_part('template-parts/slider'); ?>
 
     <div id="primary" class="content-area">
       <main id="main" class="site-main">
 
+<div class="clear"></div>
 
       <!-- Admisiones  -->
       <div class="row">

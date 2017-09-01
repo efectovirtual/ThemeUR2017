@@ -1,8 +1,6 @@
 <div class="binicio">
 
 <div id="owl-slider" class="owl-carousel">
-
-
     <?php $args=array(
       // Banner Inicial
       'post_type' => 'slider',
