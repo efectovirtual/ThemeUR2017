@@ -14,6 +14,9 @@
 
 get_header(); ?>
 
+<div id="botoninscribeteaqui" data-open="popupinscribete">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/inscribete-aqui-boton.png" alt="Inscríbete">
+</div>
 
   <header id="masthead" class="site-header" role="banner">
 
@@ -104,6 +107,7 @@ get_header(); ?>
               <div class="columns large-3 medium-5">
                 <ul class="botones-right-inicio">
                   <a href="<?php echo site_url(); ?>/resoluciones-rectorales/"><li><i class="fa fa-bullseye" aria-hidden="true"></i><p>Resoluciones Rectorales</p></li></a>
+                  <a href="<?php echo site_url(); ?>/valores-derechos-pecuniarios/"><li><i class="fa fa-gavel" aria-hidden="true"></i><p>Derechos Pecuniarios</p></li></a>
                   <a href="<?php echo site_url(); ?>/calendario-academico/"><li><i class="fa fa-calendar" aria-hidden="true"></i><p>Calendario Académico</p></li></a>
                   <a href="http://iceberg.unireformada.edu.co:8080/sinugwt/"><li class="doblelinea"><i class="fa fa-cube" aria-hidden="true"></i><p>Sistema de Información Académico</p></li></a>
                   <a href="<?php echo site_url(); ?>/instructivo-sia-cur/"><li><i class="fa fa-book" aria-hidden="true"></i><p>Instructivo SIA CUR</p></li></a>
@@ -123,8 +127,7 @@ get_header(); ?>
 
     <?php $args=array(
       'post_type' => 'post',
-      'orderby' => 'menu_order',
-      'order' => 'ASC',
+      'order' => 'DESC',
       'posts_per_page' => -1,
       'cat' => 3
     );?>
@@ -239,10 +242,10 @@ get_header(); ?>
       <div class="row">
           <div class="column">
               <ul>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/img/idi-idiomas.png" alt=""></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/img/emas-icon-2017.png" alt=""></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/img/bibliotecaUR.png" alt=""></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/img/bt-camara.png" alt=""></li>
+                <a href="http://institutodeidiomas.unireformada.edu.co/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/idi-idiomas.png" alt=""></li></a>
+                <a href="<?php echo site_url(); ?>/emas/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/emas-icon-2017.png" alt=""></li></a>
+                <a href="<?php echo site_url(); ?>/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/bibliotecaUR.png" alt=""></li></a>
+                <a href="<?php echo site_url(); ?>/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/bt-camara.png" alt=""></li></a>
               </ul>
         </div>
       </div>
