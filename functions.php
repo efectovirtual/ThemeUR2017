@@ -124,6 +124,8 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 
 		wp_enqueue_style('owlcarousel', get_template_directory_uri().'/owl-carousel/owl.carousel.css');
 
+		wp_enqueue_style('uijquerycss', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
+
 		// wp_enqueue_style('foundation-css', 'https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css' );
 
 
@@ -152,6 +154,8 @@ add_action( 'widgets_init', 'ureformada_widgets_init' );
 		wp_enqueue_script('evJS', get_template_directory_uri().'/js/app-ev.js', array(), '1.2.4', true );
 
 		wp_enqueue_script('appjs', get_template_directory_uri().'/js/app.js', array(), '6.2.3', true );
+
+		wp_enqueue_script('uijqueryjs', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js', array(), '1.8', true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

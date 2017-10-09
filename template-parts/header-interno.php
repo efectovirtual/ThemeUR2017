@@ -4,27 +4,7 @@
       <!-- Header -->
   <div class="header-interno">
 
-      <div class="bartop">
-          <div class="row">
-              <ul>
-                <li><p>Llámanos: <strong>361-04-32</strong></p></li>
-                <li><p><i class="fa fa-money" aria-hidden="true"></i>Pagos</p></li>
-                <li><p><i class="fa fa-briefcase" aria-hidden="true"></i>Portal de empleo</p></li>
-                <li><p><i class="fa fa-envelope" aria-hidden="true"></i>Email</p></li>
-                <li><div class="buscadortop">
-
-                <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                    <input type="search" class="search-field"
-                  placeholder="<?php echo esc_attr_x( 'Ingresa tu búsqueda... ', 'placeholder' ) ?>"
-                  value="<?php echo get_search_query() ?>" name="s"
-                  title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-                </form>
-
-                </div></li>
-              </ul>
-            </div>
-      </div>
-
+      <?php get_template_part('template-parts/bartop'); ?>
 
     <div class="header">
         <div class="row">

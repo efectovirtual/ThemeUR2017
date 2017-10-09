@@ -70,6 +70,10 @@
     </div>
   </div>
 
+	<?php if ($i%2 == 0): ?>
+		<div class="clear"></div>
+	<?php endif; ?>
+
 <?php  $i++;  } ?>
 
 </div>

@@ -73,3 +73,28 @@ function quitarbr(){
         jQuery(window).resize(quitarbr);
 
     });
+
+
+    jQuery(document).ready(function() {
+          jQuery("input#programasearch").autocomplete({
+              source: [
+                { value: "Ingeniería Industrial", url: 'http://unireformada.edu.co/website2017/programas/ingenieria-industrial/' },
+                { value: "Ingeniería Biomédica", url: 'http://unireformada.edu.co/website2017/programas/ingenieria-biomedica/' },
+                { value: "Ingeniería Informática", url: 'http://unireformada.edu.co/website2017/programas/ingenieria-informatica/' },
+                { value: "Ingeniería Ambiental", url: 'http://unireformada.edu.co/website2017/programas/ingenieria-ambiental/' },
+                { value: "Psicología", url: 'http://unireformada.edu.co/website2017/programas/psicologia/' },
+                { value: "Teología", url: 'http://unireformada.edu.co/website2017/programas/teologia/' },
+                { value: "Música", url: 'http://unireformada.edu.co/website2017/programas/musica/' },
+                { value: "Licenciatura en Educación Bilingüe – Español e Inglés", url: 'http://unireformada.edu.co/website2017/programas/licenciatura-en-educacion-bilingue-espanol-e-ingles/' },
+                { value: "Contaduría Pública", url: 'http://unireformada.edu.co/website2017/programas/contaduria-publica/' },
+                { value: "Administración Marítima y Portuaria", url: 'http://unireformada.edu.co/website2017/programas/administracion-maritima-y-portuaria/' },
+                { value: "Administración de Empresas", url: 'http://unireformada.edu.co/website2017/programas/administracion-de-empresas/' },
+                { value: "Administración de Negocios Internacionales", url: 'http://unireformada.edu.co/website2017/programas/administracion-de-negocios-internacionales/' },
+                { value: "Especialización en desarrollo humano y organizacional", url: 'http://unireformada.edu.co/website2017/programas/especializacion-en-desarrollo-humano-y-organizacional/' },
+                { value: "Especialización en Finanzas Internacionales", url: 'http://unireformada.edu.co/website2017/programas/especializacion-en-finanzas-internacionales/' }
+              ],
+              select: function (event, ui) {
+                  window.location = ui.item.url;
+              }
+          });
+      });
